@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShukailaLabs.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShukailaLabs"
+    Shell.FlyoutBehavior="Flyout"
+    Title="ShukailaLabs">
+
+    <ShellContent
+        Title="Calculator"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Progress bar"
+        ContentTemplate="{DataTemplate local:ProgressBar}"
+        Route="ProgressBar"/>
+
+    <ShellContent
+        Title="Database"
+        ContentTemplate="{DataTemplate local:TeamPage}"
+        Route="TeamPage"/>
+
+    <ShellContent
+        Title="Currency converter"
+        ContentTemplate="{DataTemplate local:CurrencyConverter}"
+        Route="CurrencyConverter"/>
+
+</Shell>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShukailaLabs.TeamPage"
+             Title="TeamPage">
+    <VerticalStackLayout>
+        <Picker x:Name="picker"
+                Title="  Select a team"
+                FontSize="26"
+                SelectedIndexChanged="OnTeamSelectedIndexChanged"
+                ItemDisplayBinding="{Binding TeamName}"/>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        FontSize="Medium"
+                        Margin="7">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding ParticipantName}"/>
+                                <Span Text=" - "/>
+                                <Span Text="{Binding ParticipantContractCost}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
